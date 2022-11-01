@@ -1,0 +1,5 @@
+*.pyc
+/submissions/
+
+questionnaires/video.json
+static/videos/
