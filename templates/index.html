@@ -3,11 +3,11 @@
 {% block title %}Questionnaire List{% endblock title %}
 
 {% block content %}
-  <h1>List of Questionnaires</h1>
+  <h1 class="mt-3" style="text-align: center;">List of Questionnaires</h1>
   <ul class="list-group">
   {% for slug, data in questionnaires %}
     <li class="list-group-item">
-      {{ data.title }}
+      <h3 class="mt-3"> {{ data.title }} </h3>
       <ul class="form">
         <li> <a href="{{ url_for('q10r.questionnaire', slug=slug) }}">Form</a> </li>
         <li> <a href="{{ url_for('q10r.results', slug=slug) }}">Results</a> </li>

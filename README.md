@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Making a questionnaire
+### Make a questionnaire
 
 Create a JSON file under `questionnaires`, follow the `example.json` to config your questionnaire.
 
@@ -24,3 +24,8 @@ Create a JSON file under `questionnaires`, follow the `example.json` to config y
 # debug mode in local environment
 python app.py
 ```
+
+The hosted pages:
+* All available questionnaires, admin login required (http://localhost:5000)
+* Questionnaire, publicly available (http://localhost:5000/example)
+* Results, admin login required (http://localhost:5000/example/results)
