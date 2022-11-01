@@ -113,15 +113,12 @@ def _get_submissions(slug):
 
 def _write_submission(data, slug):
     sdir = os.path.join(_get_option('SUBMISSIONS_DIR'), slug)
-    try:
-        os.makedirs(sdir)
-    except OSError:
-        pass
+    os.makedirs(sdir, exist_ok=True)
     timestamp = datetime.now().strftime(SUBMISSION_DATEFMT)
     sfile = os.path.join(sdir, timestamp + '.json')
-    # print(data)
     with open(sfile, 'w') as f:
         json.dump(data, f, indent=2)
+    print(f'[INFO] write submission {sfile}')
 
 
 # HTTP Basic Auth
@@ -173,7 +170,6 @@ def questionnaire(slug):
         submissions = defaultdict(lambda: tuple(None, None))
         form = request.form
         for name, values in form.lists():
-            print(name, values)
             if name == 'submit' or name.endswith('.other'):
                 continue
             valid = name.startswith('q')
@@ -222,8 +218,7 @@ def questionnaire(slug):
             return render_template(template, questionnaire=data, slug=slug)
         else:
             _write_submission(submissions, slug)
-            return render_template("success.html",
-                                   message=data['messages']['success'])
+            return render_template("success.html", message=data['messages']['success'])
 
 
 @q10r.route('/<slug>/results', methods=['GET'])
