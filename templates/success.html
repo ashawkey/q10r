@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title -%}
+  Form submitted
+{%- endblock title %}
+
+{% block content %}
+<div class="alert alert-success mx-auto mt-5" role="alert" style="min-width: 500px; max-width: 800px;">
+  {{ message }}
+</div>
+{% endblock content %}

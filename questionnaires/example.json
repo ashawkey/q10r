@@ -1,0 +1,52 @@
+{
+    "title": "Example Form",
+    "comment": "This is a general comment you want to display before all questions.",
+    "questions": [
+        {
+            "type": "string",
+            "label": "string example",
+            "help": "Input a string.",
+            "required": true
+        },
+        {
+            "type": "checkbox",
+            "label": "checkbox example",
+            "help": "check multiple options.",
+            "required": true,
+            "options": [
+                "1",
+                "2",
+                "3",
+                "+Other"
+            ]
+        },
+        {
+            "type": "radio",
+            "label": "radio example",
+            "help": "choose one option.",
+            "required": true,
+            "options": [
+                "A",
+                "B",
+                "+Other"
+            ]
+        },
+        {
+            "type": "text",
+            "label": "text area example",
+            "help": "put in some text."
+        },
+        {
+            "type": "matrix",
+            "label": "range matrix",
+            "help": "score for multiple options",
+            "required": true,
+            "options": [
+                "A", "B"
+            ],
+            "min": 1,
+            "max": 10,
+            "step": 1
+        }
+    ]
+}
