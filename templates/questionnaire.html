@@ -8,7 +8,10 @@
   <h1 class="mt-3" style="text-align: center;">{{ questionnaire.title }}</h1>
   {% if questionnaire.comment %}
     <div class="alert alert-dark mx-auto" role="alert" style="min-width: 500px; max-width: 800px;">
-      <p>{{ questionnaire.comment }}</p>
+      <!-- silly multiple-line comments from json -->
+      {% for line in questionnaire.comment %}
+        <p> {{ line }} </p>
+      {% endfor %}
     </div>
   {% endif %}
   {% include "form.html" %}

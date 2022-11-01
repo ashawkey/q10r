@@ -31,7 +31,7 @@
         <!-- video embedding -->
         <div style="text-align: center;">
           {% if q.video %}
-            <video width="450" height="450" controls>
+            <video style="width: 450px; height: 450px;" controls>
               <source src="{{ url_for('static', filename=q.video) }}" type="video/mp4">
               Your browser does not support the video tag.
             </video>

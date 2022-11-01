@@ -1,6 +1,9 @@
 {
     "title": "Example Form",
-    "comment": "This is a general comment you want to display before all questions.",
+    "comment": [
+        "This is a general comment you want to display before all questions.",
+        "You should use a list to support multiple lines."
+    ],
     "questions": [
         {
             "type": "string",
