@@ -1,6 +1,6 @@
 # q10r
 
-This is a fork of [q10r](https://github.com/vlevit/q10r) modified to support embedding local videos.
+This is a fork of [q10r](https://github.com/vlevit/q10r) modified to support embedding videos.
 
 > q10r is a simple questionnaire web app based on Flask. 
 It produces questionnaires from JSON files and stores submissions in JSON files under different directory. 
@@ -22,7 +22,10 @@ Create a JSON file under `questionnaires`, follow the `example.json` to config y
 
 ```bash
 # debug mode in local environment
-python app.py
+python app.py --port=5000
+
+# serve with waitress
+waitress-serve --threads=32 --port=5000 app:app
 ```
 
 The hosted pages:

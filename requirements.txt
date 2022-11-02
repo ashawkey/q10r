@@ -3,3 +3,5 @@ itsdangerous
 Jinja2
 MarkupSafe
 Werkzeug
+
+waitress
