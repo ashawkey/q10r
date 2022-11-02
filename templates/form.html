@@ -22,17 +22,20 @@
       </div>
 
       <div class="card-body">
+
         <!-- help text -->
         <p class="card-text">
           {% if q.help %}
             {{ q.help }}
           {% endif %}
         </p>
+
         <!-- video embedding -->
         <div style="text-align: center;">
           {% if q.video %}
+            <!-- TODO: hard-coded video size... -->
             <video style="width: 450px; height: 450px;" controls>
-              <source src="{{ url_for('static', filename=q.video) }}" type="video/mp4">
+              <source src="{{q.video}}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           {% endif %}

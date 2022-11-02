@@ -42,7 +42,8 @@
         {
             "type": "matrix",
             "label": "range matrix",
-            "help": "score for multiple options",
+            "video": "https://user-images.githubusercontent.com/25863658/197331690-2c9f7f55-e571-4e66-90f3-fd3580c9a88f.mp4",
+            "help": "score for multiple options. Also show how to embed a video.",
             "required": true,
             "options": [
                 "A", "B"
