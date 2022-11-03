@@ -154,8 +154,7 @@ def requires_auth(f):
 def index():
     dir_ = _get_option('DIR')
     qs = map(lambda s: (s[:-5], _get_questionnaire_data(s[:-5])),
-             filter(lambda s: not s.startswith('_') and s.endswith('.json'),
-                    os.listdir(dir_)))
+             sorted(filter(lambda s: s.endswith('.json'), os.listdir(dir_))))
     return render_template('index.html', questionnaires=qs)
 
 
