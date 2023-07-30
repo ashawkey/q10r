@@ -8,7 +8,7 @@ QUESTIONNAIRE_DIR = os.path.join(curdir, 'questionnaires')
 QUESTIONNAIRE_SUBMISSIONS_DIR = os.path.join(curdir, 'submissions')
 
 # admin account to check the results and available questionnaires.
-QUESTIONNAIRE_BASIC_AUTH = ('kiui', 'tmp_1123 j')
+QUESTIONNAIRE_BASIC_AUTH = ('kiui', 'tmp1234')
 
 QUESTIONNAIRE_DEFAULTS = {
     "submit": "Submit",

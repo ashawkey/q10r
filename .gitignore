@@ -1,5 +1,7 @@
 *.pyc
 /submissions/
 
-questionnaires/video.json
+questionnaires/video*.json
 static/videos/
+
+analyze.py
