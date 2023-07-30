@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 ### Make a questionnaire
 
-Create a JSON file under `questionnaires`, follow the `example.json` to config your questionnaire.
+Create a JSON file under `questionnaires`, follow the [`example.json`](./questionnaires/example.json) to config your questionnaire.
 
 Supported type of questions:
 * string
@@ -27,7 +27,7 @@ Supported type of questions:
 * radio
 * matrix
 
-To embed a video, you could use either a public website link, or a path to a local video in `static`.
+To embed a video, you could use either a public website link, or a path to a local video under `./static`.
 
 ### Deploy
 
