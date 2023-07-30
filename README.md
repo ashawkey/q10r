@@ -27,7 +27,7 @@ Supported type of questions:
 * radio
 * matrix
 
-To embed a video, you could use either a public website link, or a path to a local video under `./static`.
+You can embed images or videos in your question, by providing a public link or a local path under `./static`.
 
 ### Deploy
 

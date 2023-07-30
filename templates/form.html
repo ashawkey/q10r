@@ -30,11 +30,18 @@
           {% endif %}
         </p>
 
+        <!-- image embedding -->
+        <div style="text-align: center;">
+          {% if q.image %}
+            <img src="{{q.image}}" style="margin: 5px">
+          {% endif %}
+        </div>
+
         <!-- video embedding -->
         <div style="text-align: center;">
           {% if q.video %}
             <!-- TODO: hard-coded video size... -->
-            <video style="width: 450px; height: 450px;" controls>
+            <video style="width: 450px; height: 450px; margin: 5px" controls>
               <source src="{{q.video}}" type="video/mp4">
               Your browser does not support the video tag.
             </video>
