@@ -34,15 +34,15 @@
           <div class="row">
             <!-- image embedding -->
             {% if q.image %}
-            <div class="col-sm" style="text-align: center;">
-                <img src="{{q.image}}" style="margin: 5px">
+            <div class="col" style="text-align: center;">
+                <img src="{{q.image}}" style="width: 300px; height: 300px; margin: 5px">
               </div>
             {% endif %}
     
             <!-- video embedding -->
             {% if q.video %}
-            <div class="col-sm" style="text-align: center;">
-              <video style="width: 450px; height: 450px; margin: 5px" controls autoplay loop>
+            <div class="col" style="text-align: center;">
+              <video style="width: 300px; height: 300px; margin: 5px" controls autoplay loop>
                 <source src="{{q.video}}" type="video/mp4">
                 Your browser does not support the video tag.
               </video>

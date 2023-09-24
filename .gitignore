@@ -6,3 +6,5 @@ questionnaires/q*.json
 static/videos/
 
 analyze.py
+
+static/data
