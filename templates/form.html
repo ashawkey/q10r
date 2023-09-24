@@ -3,7 +3,7 @@
     {% set qloop = loop %}
     {% set qid = "q{0}".format(loop.index0) %}
     <!-- each question -->
-    <div class="card mt-3 mx-auto" style="min-width: 500px; max-width: 800px;">
+    <div class="card mt-3 mx-auto" style="min-width: 500px; max-width: 1000px;">
 
       <!-- label text -->
       <div class="card-header" style="text-align: center;">
@@ -29,24 +29,28 @@
             {{ q.help }}
           {% endif %}
         </p>
-
-        <!-- image embedding -->
-        <div style="text-align: center;">
-          {% if q.image %}
-            <img src="{{q.image}}" style="margin: 5px">
-          {% endif %}
+        
+        <div class="container">
+          <div class="row">
+            <!-- image embedding -->
+            {% if q.image %}
+            <div class="col-sm" style="text-align: center;">
+                <img src="{{q.image}}" style="margin: 5px">
+              </div>
+            {% endif %}
+    
+            <!-- video embedding -->
+            {% if q.video %}
+            <div class="col-sm" style="text-align: center;">
+              <video style="width: 450px; height: 450px; margin: 5px" controls autoplay loop>
+                <source src="{{q.video}}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            {% endif %}
+          </div>
         </div>
 
-        <!-- video embedding -->
-        <div style="text-align: center;">
-          {% if q.video %}
-            <!-- TODO: hard-coded video size... -->
-            <video style="width: 450px; height: 450px; margin: 5px" controls>
-              <source src="{{q.video}}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          {% endif %}
-        </div>
 
         <!-- user input -->
         <div>

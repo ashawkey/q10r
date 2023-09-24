@@ -2,6 +2,7 @@
 /submissions/
 
 questionnaires/video*.json
+questionnaires/q*.json
 static/videos/
 
 analyze.py

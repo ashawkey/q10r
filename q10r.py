@@ -72,7 +72,7 @@ def __get_questionnaire_data(slug):
     """Read questionnaire data from the file pointed by slug."""
     qfile = os.path.join(_get_option('DIR'), slug + '.json')
     try:
-        with open(qfile) as f:
+        with open(qfile, encoding='utf-8') as f:
             data = json.load(f)
             if not isinstance(data, dict):
                 raise ValueError('json top level structure must be object')
