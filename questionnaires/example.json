@@ -32,6 +32,9 @@
         {
             "type": "radio",
             "label": "radio example, also show how to embed an image",
+            "media": [
+                {"type": "image", "source": "static/fish.jpg"}
+            ],
             "image": "static/fish.jpg",
             "help": "choose one option.",
             "required": true,
@@ -44,8 +47,27 @@
         {
             "type": "matrix",
             "label": "range matrix example",
-            "video": "static/fish.mp4",
+            "media": [
+                {"type": "image", "source": "static/fish.jpg"},
+                {"type": "video", "source": "static/fish.mp4"}
+            ],
             "help": "range matrix example, also show how to embed a video.",
+            "required": true,
+            "options": [
+                "A", "B"
+            ],
+            "min": 1,
+            "max": 10,
+            "step": 1
+        },
+        {
+            "type": "matrix",
+            "label": "range matrix example",
+            "media": [
+                {"type": "point", "source": "static/acorn_pc.obj"},
+                {"type": "mesh", "source": "static/acorn.ply"}
+            ],
+            "help": "embed point cloud or wireframe mesh. Note: most browsers only support 16 webGL contexts!",
             "required": true,
             "options": [
                 "A", "B"

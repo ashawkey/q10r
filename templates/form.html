@@ -30,24 +30,31 @@
           {% endif %}
         </p>
         
+        <!-- extra media -->
         <div class="container">
           <div class="row">
-            <!-- image embedding -->
-            {% if q.image %}
-            <div class="col" style="text-align: center;">
-                <img src="{{q.image}}" style="width: 300px; height: 300px; margin: 5px">
-              </div>
-            {% endif %}
-    
-            <!-- video embedding -->
-            {% if q.video %}
-            <div class="col" style="text-align: center;">
-              <video style="width: 300px; height: 300px; margin: 5px" controls autoplay loop>
-                <source src="{{q.video}}" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            {% endif %}
+            {% for m in q.media %}
+              {% if m.type == "image" %}
+                <div class="col" style="text-align: center;">
+                  <img src="{{m.source}}" style="width: 300px; height: 300px; margin: 5px">
+                </div>
+              {% elif m.type == "video" %}
+                <div class="col" style="text-align: center;">
+                  <video style="width: 300px; height: 300px; margin: 5px" controls autoplay loop>
+                    <source src="{{m.source}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              {% elif m.type == "point" %}
+                <div class="col" style="text-align: center;">
+                  <iframe src="static/3dviewer.html?file=../{{m.source}}&point=true" scrolling="no" style="width: 300px; aspect-ratio: 1/1; margin: 5px"> </iframe>
+                </div>
+              {% elif m.type == "mesh" %}
+                <div class="col" style="text-align: center;">
+                  <iframe src="static/3dviewer.html?file=../{{m.source}}&wire=true" scrolling="no" style="width: 300px; aspect-ratio: 1/1; margin: 5px"> </iframe>
+                </div>
+              {% endif %}
+            {% endfor %}
           </div>
         </div>
 
